@@ -1,0 +1,105 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  font-family: 'Arial, sans-serif'; /* Change the font family as desired */
+  background-color: #fff; /* Page background color */
+}
+
+.canvas-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: white;
+  width: 800px;
+  height: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+canvas {
+  border: none;
+}
+
+.placeholder {
+  position: absolute;
+  color: #aaa;
+  font-size: 24px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input[type="file"] {
+  display: none; /* Hide the file input */
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #000; /* Button background color */
+  color: #fff; /* Button text color */
+  border-radius: 20px; /* Pill-shaped button */
+  font-family: 'Helvetica, sans-serif'; /* Button font */
+  font-weight: bold;
+}
+
+.text-select {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fff; /* Background color */
+  color: #000; /* Text color */
+  border: 1px solid #000;
+  border-radius: 5px; /* Button shape */
+  font-family: 'IBM Plex Mono', monospace; /* Text field font */
+}
+
+.custom-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #000; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 20px; /* Pill-shaped button */
+  font-family: 'Helvetica, sans-serif'; /* Button font */
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .canvas-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .controls > .button-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-select {
+    margin-top: 10px;
+    width: 80%; /* Adjust as needed */
+  }
+}
